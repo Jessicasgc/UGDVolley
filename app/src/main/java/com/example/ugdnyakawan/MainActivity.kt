@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setTitle("User Login")
+        supportActionBar?.hide()
 
 
         inputUsername = findViewById(R.id.tilUsername)
@@ -76,6 +76,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RegistrasiActivity::class.java)
             startActivity(intent)
         }
+
+        /*val isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+            .getBoolean("isFirstRun", true)
+        if(isFirstRun){
+            startActivity(Intent(this@MainActivity, Splash::class.java))
+            finish()
+        }
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+            .putBoolean("isFistRun", false).commit()*/
     }
 
     fun getBundle(){

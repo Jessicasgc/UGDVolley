@@ -18,8 +18,10 @@ class HomeActivity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home1)
+        supportActionBar?.hide()
 
         val fh = FragmentHome()
+        val fp = FragmentProfil()
         val fma = FragmentMakan()
         val fmi = FragmentMinum()
 
@@ -32,6 +34,12 @@ class HomeActivity1 : AppCompatActivity() {
                 loadFragment(fh)
 
             }
+
+            R.id.menu_profil -> {
+                loadFragment(fp)
+
+            }
+
             R.id.menu_makanan-> {
                 loadFragment(fma)
 

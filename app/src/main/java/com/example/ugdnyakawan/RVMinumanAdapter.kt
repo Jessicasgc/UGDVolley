@@ -17,7 +17,11 @@ class RVMinumanAdapter(private val data: Array<ListMinuman>) : RecyclerView.Adap
     override fun onBindViewHolder(holder:viewHolder, position: Int){
         val currentItem = data[position]
         holder.tvNama1.text = currentItem.nama
+        holder.tvNama2.text = currentItem.nama
+        holder.tvNama3.text = currentItem.nama
         holder.tvDeskripsi1.text = currentItem.deskripsi
+        holder.tvDeskripsi2.text = currentItem.deskripsi
+        holder.tvDeskripsi3.text = currentItem.deskripsi
     }
 
     override fun getItemCount(): Int {
