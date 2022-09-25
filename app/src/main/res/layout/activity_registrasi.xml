@@ -129,10 +129,10 @@
         android:text="Registrasi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintHorizontal_bias="0.907"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilNoTelp"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <TextView
         android:id="@+id/tvLogin"
