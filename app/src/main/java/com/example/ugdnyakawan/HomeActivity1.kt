@@ -32,21 +32,21 @@ class HomeActivity1 : AppCompatActivity() {
         when (it.itemId) {
             R.id.menu_home -> {
                 loadFragment(fh)
-
+                return@setOnNavigationItemReselectedListener
             }
 
             R.id.menu_profil -> {
                 loadFragment(fp)
-
+                return@setOnNavigationItemReselectedListener
             }
 
             R.id.menu_makanan-> {
                 loadFragment(fma)
-
+                return@setOnNavigationItemReselectedListener
             }
             R.id.menu_minuman -> {
                 loadFragment(fmi)
-
+                return@setOnNavigationItemReselectedListener
             }
             R.id.menu_exit -> {
                 val mBuilder = android.app.AlertDialog.Builder(this@HomeActivity1)

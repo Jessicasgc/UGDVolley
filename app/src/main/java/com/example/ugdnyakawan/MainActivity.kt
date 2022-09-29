@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.android.synthetic.main.activity_registrasi.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,15 +20,24 @@ class MainActivity : AppCompatActivity() {
     lateinit var user: String
     lateinit var pass: String
     lateinit var bundle: Bundle
+    lateinit var tempUser : String
+    lateinit var tempPass: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        user = ""
+        pass = ""
+        tempUser = ""
+        tempPass = ""
+        getBundle()
+
 
         supportActionBar?.hide()
 
 
         inputUsername = findViewById(R.id.tilUsername)
         inputPassword = findViewById(R.id.tilPassword)
+
         mainLayout = findViewById(R.id.mainLayout)
 
         val btnClear : Button = findViewById(R.id.btnClear)
@@ -77,28 +87,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /*val isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-            .getBoolean("isFirstRun", true)
-        if(isFirstRun){
-            startActivity(Intent(this@MainActivity, Splash::class.java))
-            finish()
-        }
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-            .putBoolean("isFistRun", false).commit()*/
+
     }
 
     fun getBundle(){
-        val bundle: Bundle? = intent.extras
+        bundle= intent.getBundleExtra("register")!!
 
-        val nm: String? = bundle?.getString("username")
-        val ps: String? = bundle?.getString("password")
+        tempPass = bundle.getString("username")!!
+        tempUser = bundle.getString("password")!!
 
         inputUsername = findViewById(R.id.tilUsername)
         inputPassword = findViewById(R.id.tilPassword)
-        inputUsername.getEditText()?.setText(nm)
-        inputPassword.getEditText()?.setText(ps)
-        user = nm.toString()
-        pass = ps.toString()
+        inputUsername?.getEditText()?.setText(tempUser)
+        inputPassword?.getEditText()?.setText(tempPass)
+        user = tempUser
+        pass = tempPass
+
     }
 
 }

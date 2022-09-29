@@ -3,7 +3,7 @@ package com.example.ugdnyakawan.room
 import androidx.room.*
 
 @Dao
-interface UserDao {
+interface UserDao{
     @Insert
     suspend fun addUser(user: User)
     @Update
