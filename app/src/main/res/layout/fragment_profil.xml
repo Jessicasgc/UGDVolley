@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/yellow"
             android:textColor="@color/black"
-            android:text="Tulis Catatan"
+            android:text="Tambah"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

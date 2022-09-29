@@ -91,17 +91,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getBundle(){
+
         bundle= intent.getBundleExtra("register")!!
 
         tempPass = bundle.getString("username")!!
         tempUser = bundle.getString("password")!!
 
+        //bundle= intent.getBundleExtra("register")!!
+        val bundle:Bundle?=intent.extras
+
+        val tempUser:String? = bundle?.getString("username")
+        val tempPass:String? = bundle?.getString("password")!!
+
+
         inputUsername = findViewById(R.id.tilUsername)
         inputPassword = findViewById(R.id.tilPassword)
         inputUsername?.getEditText()?.setText(tempUser)
         inputPassword?.getEditText()?.setText(tempPass)
+
         user = tempUser
         pass = tempPass
+
+        user = tempUser.toString()
+        pass = tempPass.toString()
+
 
     }
 
