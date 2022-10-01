@@ -12,7 +12,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class RegistrasiActivity : AppCompatActivity() {
-
     private lateinit var iusername: TextInputEditText
     private lateinit var ipassword: TextInputEditText
     private lateinit var iemail: TextInputEditText
@@ -24,19 +23,6 @@ class RegistrasiActivity : AppCompatActivity() {
     private lateinit var lemail: TextInputLayout
     private lateinit var ltglLahir: TextInputLayout
     private lateinit var lnotelp: TextInputLayout
-
-    //private lateinit var iusername: TextInputEditText
-    //private lateinit var ipassword: TextInputEditText
-    //private lateinit var iemail: TextInputEditText
-    //private lateinit var itglLahir: TextInputEditText
-    //private lateinit var inotelp: TextInputEditText
-    var binding : ActivityRegistrasiBinding? = null
-    //private lateinit var lusername: TextInputLayout
-    //private lateinit var lpassword: TextInputLayout
-    //private lateinit var lemail: TextInputLayout
-    //private lateinit var ltglLahir: TextInputLayout
-    //private lateinit var lnotelp: TextInputLayout
-
     private lateinit var registrasiLayout: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +33,6 @@ class RegistrasiActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_registrasi)
         binding = ActivityRegistrasiBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
 
         iusername = findViewById(R.id.etUsername)
         ipassword = findViewById(R.id.etPassword)
@@ -61,35 +46,10 @@ class RegistrasiActivity : AppCompatActivity() {
         lemail = findViewById(R.id.tilEmail)
         ltglLahir = findViewById(R.id.tilTglLahir)
         lnotelp = findViewById(R.id.tilNoTelp)
-=======
-        //iusername = findViewById(R.id.etUsername)
-        //ipassword = findViewById(R.id.etPassword)
-        //iemail = findViewById(R.id.etEmail)
-        //itglLahir = findViewById(R.id.etTglLahir)
-        //inotelp = findViewById(R.id.etNoTelp)
-        registrasiLayout = findViewById(R.id.registrasiLayout)
-
-        //lusername = findViewById(R.id.tilUsername)
-        //lpassword = findViewById(R.id.tilPassword)
-        //lemail = findViewById(R.id.tilEmail)
-        //ltglLahir = findViewById(R.id.tilTglLahir)
-        //lnotelp = findViewById(R.id.tilNoTelp)
-
 
 
         val btnRegistrasi: Button = findViewById(R.id.btnRegistrasi)
         val tvLogin: TextView = findViewById(R.id.tvLogin)
-
-        val isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-            .getBoolean("isFirstRun", true)
-        if (isFirstRun) {
-            //show start activity
-            startActivity(Intent(this@RegistrasiActivity, Splash::class.java))
-            finish()
-        }
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-            .putBoolean("isFirstRun", false).commit()
-
 
         val isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
             .getBoolean("isFirstRun", true)
@@ -154,8 +114,8 @@ class RegistrasiActivity : AppCompatActivity() {
 
                 intentToLogin.putExtra("register", bundle)
                 startActivity(intentToLogin)
-        }
+            }
 
         }
-}
+    }
 }
