@@ -92,7 +92,7 @@ class Usertama : AppCompatActivity() {
     //pick data dari Id yang sebagai primary key
     fun intentEdit(userId : Int, intentType: Int){
         startActivity(
-            Intent(applicationContext, EditActivity::class.java)
+            Intent(applicationContext, EditProfileActivity::class.java)
                 .putExtra("intent_id", userId)
                 .putExtra("intent_type", intentType)
         )

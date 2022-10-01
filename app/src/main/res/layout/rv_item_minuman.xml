@@ -1,305 +1,102 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/backgroundmenu">
+    android:layout_height="wrap_content">
 
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="192dp"
-            android:layout_marginTop="171dp"
-            android:layout_marginEnd="10dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true">
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
 
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="240dp"
-                android:layout_marginTop="85dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="280dp"
-                android:layout_marginTop="85dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="220dp"
-                android:layout_marginTop="85dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="153dp"
-                android:layout_height="153dp"
-                android:src="@drawable/esteh"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/img"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:contentDescription="@string/app_name" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="ES Tea" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="20dp"
-                android:longClickable="false"
-                android:text="Deskripsi \n\nTea manis yang diperpadukan dengan ES yang segar\nRating:" />
-
-            <ImageView
-                android:id="@+id/imageView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="260dp"
-                android:layout_marginTop="85dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView62"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="85dp"
-                app:srcCompat="@drawable/ic_baseline_star_half_24" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="192dp"
-            android:layout_marginEnd="10dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true">
-
-
-            <ImageView
-                android:id="@+id/imageView52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="242dp"
-                android:layout_marginTop="115dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="282dp"
-                android:layout_marginTop="115dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="222dp"
-                android:layout_marginTop="115dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView21"
-                android:layout_width="153dp"
-                android:layout_height="153dp"
-                android:src="@drawable/esjeruk"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:contentDescription="@string/app_name" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="ES Jeruk" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="20dp"
-                android:longClickable="false"
-                android:text="Deskripsi \n\nAir Jeruk manis yang diperpadukan dengan ES yang segar\nRating:" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="262dp"
-                android:layout_marginTop="115dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="302dp"
-                android:layout_marginTop="115dp"
-                app:srcCompat="@drawable/ic_baseline_star_half_24" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView55"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true">
+            android:layout_marginStart="242dp"
+            android:layout_marginTop="102dp"
+            app:srcCompat="@drawable/ic_baseline_star_24" />
 
+        <ImageView
+            android:id="@+id/imageView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="282dp"
+            android:layout_marginTop="102dp"
+            app:srcCompat="@drawable/ic_baseline_star_24" />
 
-            <ImageView
-                android:id="@+id/imageView55"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="242dp"
-                android:layout_marginTop="102dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
+        <ImageView
+            android:id="@+id/imageView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:layout_marginTop="102dp"
+            app:srcCompat="@drawable/ic_baseline_star_24" />
 
-            <ImageView
-                android:id="@+id/imageView48"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="282dp"
-                android:layout_marginTop="102dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="153dp"
+            android:layout_height="153dp"
+            android:src="@drawable/esjusbuah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="222dp"
-                android:layout_marginTop="102dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Es Buah"
+            android:textColor="#130C0C" />
 
-            <ImageView
-                android:id="@+id/imageView27"
-                android:layout_width="153dp"
-                android:layout_height="153dp"
-                android:src="@drawable/esjusbuah"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvDesk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp"
+            android:longClickable="false"
+            android:text="Deskripsi \n\nAir Jeruk manis yang diperpadukan dengan ES yang segar"
+            android:textColor="#100C0C" />
 
-            <ImageView
-                android:id="@+id/img24"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/tvDesk2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="103dp"
+            android:longClickable="false"
+            android:text="Rating:"
+            android:textColor="#090707" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="262dp"
+            android:layout_marginTop="102dp"
+            app:srcCompat="@drawable/ic_baseline_star_24" />
 
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Jus Buah" />
+        <ImageView
+            android:id="@+id/imageView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="302dp"
+            android:layout_marginTop="102dp"
+            app:srcCompat="@drawable/ic_baseline_star_half_24" />
 
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="20dp"
-                android:longClickable="false"
-                android:text="Deskripsi \n\nBerbagai macam buah yang dicampur serta diberi ES yang segar\nRating:" />
-
-            <ImageView
-                android:id="@+id/imageView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="262dp"
-                android:layout_marginTop="102dp"
-                app:srcCompat="@drawable/ic_baseline_star_24" />
-
-            <ImageView
-                android:id="@+id/imageView40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="302dp"
-                android:layout_marginTop="102dp"
-                app:srcCompat="@drawable/ic_baseline_star_half_24" />
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
+
+
+

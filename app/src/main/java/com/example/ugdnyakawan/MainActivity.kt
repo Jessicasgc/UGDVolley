@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputUsername: TextInputLayout
     private lateinit var inputPassword: TextInputLayout
     private lateinit var mainLayout: ConstraintLayout
-    lateinit var user: String
-    lateinit var pass: String
-    lateinit var bundle: Bundle
-    lateinit var tempUser : String
-    lateinit var tempPass: String
+    var user: String? = ""
+    var pass: String? = ""
+    var bundle: Bundle? = null
+    var tempUser : String? = ""
+    var tempPass: String? = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -91,10 +91,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getBundle(){
-        bundle= intent.getBundleExtra("register")!!
+        bundle= intent?.getBundleExtra("register")
 
-        tempPass = bundle.getString("username")!!
-        tempUser = bundle.getString("password")!!
+        tempPass = bundle?.getString("username")
+        tempUser = bundle?.getString("password")
 
         inputUsername = findViewById(R.id.tilUsername)
         inputPassword = findViewById(R.id.tilPassword)

@@ -19,26 +19,14 @@
             android:label="@string/title_activity_usertama"
             android:theme="@style/Theme.UGDnyakawan.NoActionBar" />
         <activity
-            android:name=".EditUser"
+            android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".First2Fragment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
-            android:name=".EditActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".EditActivityNote"
+            android:exported="true"/>
         <activity
             android:name=".Splash"
             android:exported="false" />
