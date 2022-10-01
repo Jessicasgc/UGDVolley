@@ -27,7 +27,6 @@ class HomeActivity1 : AppCompatActivity() {
 
     Nav = findViewById(R.id.bottomNavigation)
 
-    loadFragment(fh)
     Nav.setOnNavigationItemReselectedListener{
         when (it.itemId) {
             R.id.menu_home -> {
