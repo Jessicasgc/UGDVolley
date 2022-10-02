@@ -14,26 +14,16 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.example.ugdnyakawan.databinding.ActivityRegistrasiBinding
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 
 class RegistrasiActivity : AppCompatActivity() {
-    private lateinit var iusername: TextInputEditText
-    private lateinit var ipassword: TextInputEditText
-    private lateinit var iemail: TextInputEditText
-    private lateinit var itglLahir: TextInputEditText
-    private lateinit var inotelp: TextInputEditText
-    var binding : ActivityRegistrasiBinding? = null
-    private lateinit var lusername: TextInputLayout
-    private lateinit var lpassword: TextInputLayout
-    private lateinit var lemail: TextInputLayout
-    private lateinit var ltglLahir: TextInputLayout
-    private lateinit var lnotelp: TextInputLayout
+    private var binding : ActivityRegistrasiBinding? = null
     private lateinit var registrasiLayout: ConstraintLayout
 
-    private val CHANNEL_ID_1 = "channel_notification_Registrasi"
+    private val CHANNEL_ID_1 = "channel_notification_01"
     private val notificationId1 = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,25 +37,8 @@ class RegistrasiActivity : AppCompatActivity() {
 
         createNotificationChannel()
         binding!!.btnRegistrasi.setOnClickListener {
-            sendNotification1()
+            sendNotificationRegis()
         }
-
-        iusername = findViewById(R.id.etUsername)
-        ipassword = findViewById(R.id.etPassword)
-        iemail = findViewById(R.id.etEmail)
-        itglLahir = findViewById(R.id.etTglLahir)
-        inotelp = findViewById(R.id.etNoTelp)
-        registrasiLayout = findViewById(R.id.registrasiLayout)
-
-        lusername = findViewById(R.id.tilUsername)
-        lpassword = findViewById(R.id.tilPassword)
-        lemail = findViewById(R.id.tilEmail)
-        ltglLahir = findViewById(R.id.tilTglLahir)
-        lnotelp = findViewById(R.id.tilNoTelp)
-
-
-        val btnRegistrasi: Button = findViewById(R.id.btnRegistrasi)
-        val tvLogin: TextView = findViewById(R.id.tvLogin)
 
         val isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
             .getBoolean("isFirstRun", true)
@@ -127,13 +100,14 @@ class RegistrasiActivity : AppCompatActivity() {
                 bundle.putString("email", binding?.tilEmail?.getEditText()?.getText().toString())
                 bundle.putString("tanggalLahir", binding?.tilTglLahir?.getEditText()?.getText().toString())
                 bundle.putString("nomorTelpon", binding?.tilNoTelp?.getEditText()?.getText().toString())
-
+                sendNotificationRegis()
                 intentToLogin.putExtra("register", bundle)
                 startActivity(intentToLogin)
             }
 
         }
     }
+
 
     private fun createNotificationChannel() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -150,7 +124,7 @@ class RegistrasiActivity : AppCompatActivity() {
         }
     }
 
-    private fun sendNotification1() {
+    private fun sendNotificationRegis() {
         val intent : Intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
@@ -159,9 +133,13 @@ class RegistrasiActivity : AppCompatActivity() {
         val broadcastIntent : Intent = Intent(this, NotificationReceiver::class.java)
         broadcastIntent.putExtra("toastMessage", "Anda sudah bisa login dari data yang sudah anda registrasikan")
         val actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val bigPictureBitmap = ContextCompat.getDrawable(this, R.drawable.notif)?.toBitmap()
+        val bigPictureStyle = NotificationCompat.BigPictureStyle()
+            .bigPicture(bigPictureBitmap)
 
         val builder = NotificationCompat.Builder(this, CHANNEL_ID_1)
             .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+            .setStyle(bigPictureStyle)
             .setContentTitle("Selamat Berhasil Registrasi")
             .setContentText("Anda sudah bisa login dari data yang sudah anda registrasikan")
             .setCategory(NotificationCompat.CATEGORY_MESSAGE)

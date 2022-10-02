@@ -1,13 +1,23 @@
 package com.example.ugdnyakawan
 
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_registrasi.*
@@ -22,6 +32,10 @@ class MainActivity : AppCompatActivity() {
     var bundle: Bundle? = null
     var tempUser : String? = ""
     var tempPass: String? = ""
+
+    private val CHANNEL_ID_1 = "channel_notification_01"
+    private val notificationId1 = 101
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-
+        createNotificationChannel()
         inputUsername = findViewById(R.id.tilUsername)
         inputPassword = findViewById(R.id.tilPassword)
 
@@ -78,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             if (username == user && password == pass) checkLogin = true
             if (!checkLogin) return@OnClickListener
             val toHome = Intent(this@MainActivity, HomeActivity1::class.java)
+            sendNotificationLogin()
             startActivity(toHome)
 
         })
@@ -105,6 +120,52 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun createNotificationChannel() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Notification Title"
+            val descriptionText = "Notification Description"
+
+            val channel1 = NotificationChannel(CHANNEL_ID_1, name, NotificationManager.IMPORTANCE_DEFAULT).apply {
+                description = descriptionText
+            }
+
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel1)
+        }
+    }
+
+    private fun sendNotificationLogin() {
+        val intent : Intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+
+        val broadcastIntent : Intent = Intent(this, NotificationReceiver::class.java)
+        broadcastIntent.putExtra("toastMessage", "Anda sudah bisa login dari data yang sudah anda registrasikan")
+        val actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val bigPictureBitmap = ContextCompat.getDrawable(this, R.drawable.notif)?.toBitmap()
+        val bigPictureStyle = NotificationCompat.BigPictureStyle()
+            .bigPicture(bigPictureBitmap)
+
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID_1)
+            .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+            .setStyle(bigPictureStyle)
+            .setContentTitle("Selamat Berhasil Login")
+            .setContentText("Anda sudah bisa menggunakan ")
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+            .setColor(Color.BLUE)
+            .setAutoCancel(true)
+            .setOnlyAlertOnce(true)
+            .setContentIntent(pendingIntent)
+            .addAction(R.mipmap.ic_launcher, "Toast", actionIntent)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)) {
+            notify(notificationId1, builder.build())
+        }
+    }
 }
+
 
 
