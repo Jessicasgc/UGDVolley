@@ -70,4 +70,6 @@ class EditActivityNote : AppCompatActivity() {
             onBackPressed()
             return super.onSupportNavigateUp()
         }
+
+
     }

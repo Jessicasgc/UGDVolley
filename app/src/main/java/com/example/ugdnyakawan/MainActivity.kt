@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 inputPassword.setError("Username must be filled with text")
                 checkLogin = false
             }
-
+            sendNotificationWarning()
             if (username == user && password == pass) checkLogin = true
             if (!checkLogin) return@OnClickListener
             val toHome = Intent(this@MainActivity, HomeActivity1::class.java)
@@ -144,17 +144,19 @@ class MainActivity : AppCompatActivity() {
         val broadcastIntent : Intent = Intent(this, NotificationReceiver::class.java)
         broadcastIntent.putExtra("toastMessage", "Anda sudah bisa login dari data yang sudah anda registrasikan")
         val actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT)
-        val bigPictureBitmap = ContextCompat.getDrawable(this, R.drawable.notif)?.toBitmap()
-        val bigPictureStyle = NotificationCompat.BigPictureStyle()
-            .bigPicture(bigPictureBitmap)
 
         val builder = NotificationCompat.Builder(this, CHANNEL_ID_1)
             .setSmallIcon(R.drawable.ic_baseline_notifications_24)
-            .setStyle(bigPictureStyle)
-            .setContentTitle("Selamat Berhasil Login")
-            .setContentText("Anda sudah bisa menggunakan ")
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText("ulalaulalaulalauaaaauaaaauauauauau" +
+                            "lalaulalaulalaulauuuuuuaaaaauuuuuuu" +
+                            "ulaulalalalalablwuaaaaaaaaaaaaaaaaa" +
+                            "ablablablablablablaaaaaaaaaaaaaaaaa")
+            .setBigContentTitle("Selamat Berhasil Login")
+            )
+
             .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-            .setColor(Color.BLUE)
+            .setColor(Color.MAGENTA)
             .setAutoCancel(true)
             .setOnlyAlertOnce(true)
             .setContentIntent(pendingIntent)
@@ -162,6 +164,33 @@ class MainActivity : AppCompatActivity() {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {
+            notify(notificationId1, builder.build())
+        }
+    }
+
+    private fun sendNotificationWarning(){
+        val intent : Intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
+        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+        val broadcastIntent : Intent = Intent( this, NotificationReceiver::class.java)
+        broadcastIntent.putExtra("toastMessage","Login bermasalah")
+        val actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID_1)
+            .setSmallIcon(R.drawable.ic_baseline_warning_24)
+            .setStyle(NotificationCompat.InboxStyle()
+                .addLine("Tidak sesuai")
+                .setBigContentTitle("Anda masih gagal login"))
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+            .setColor(Color.CYAN)
+            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .addAction(R.mipmap.ic_launcher, "OK", actionIntent)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)){
             notify(notificationId1, builder.build())
         }
     }

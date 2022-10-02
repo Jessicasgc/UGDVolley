@@ -7,7 +7,7 @@
 
     <item android:id="@+id/menu_profil"
         android:icon="@drawable/ic_person"
-        android:title="Home"/>
+        android:title="Profile"/>
 
     <item android:id="@+id/menu_minuman"
         android:icon="@drawable/ic_drink"
