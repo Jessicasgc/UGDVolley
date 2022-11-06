@@ -22,23 +22,23 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FragmentHome : Fragment() {
-    private var bindingCamera: FragmentHomeBinding?=null
-    private val binding get() = bindingCamera!!
+    private var bindingHome: FragmentHomeBinding?=null
+    private val binding get() = bindingHome!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        bindingCamera = FragmentHomeBinding.inflate(inflater, container, false)
+        bindingHome = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button.setOnClickListener{
-            val intent = Intent(activity, CameraActivity::class.java)
+        binding.buttonMap.setOnClickListener{
+            val intent = Intent(activity, MapActivity::class.java)
             startActivity(intent)
         }
     }

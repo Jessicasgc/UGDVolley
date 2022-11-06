@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ugdnyakawan.Camera.CameraActivity
 import com.example.ugdnyakawan.databinding.FragmentProfilBinding
 import com.example.ugdnyakawan.map.MapActivity
 
@@ -38,8 +39,8 @@ private const val ARG_PARAM2 = "password"
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
-            binding.buttonMap.setOnClickListener{
-                val intent = Intent(activity, MapActivity::class.java)
+            binding.button.setOnClickListener{
+                val intent = Intent(activity, CameraActivity::class.java)
                     startActivity(intent)
                 }
     }
