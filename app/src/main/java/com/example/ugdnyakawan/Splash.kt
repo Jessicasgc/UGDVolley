@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.ugdnyakawan.RegisLogin.RegistrasiActivity
 
 class Splash : AppCompatActivity() {
     //private val Splash_Time_Out: Long = 30

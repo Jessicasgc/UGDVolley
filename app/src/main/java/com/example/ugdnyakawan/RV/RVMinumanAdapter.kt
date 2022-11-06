@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.RV
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ugdnyakawan.R
 import com.example.ugdnyakawan.entity.ListMinuman
 
 class RVMinumanAdapter(private val data: Array<ListMinuman>) : RecyclerView.Adapter<RVMinumanAdapter.viewHolder>(){

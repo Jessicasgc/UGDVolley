@@ -7,7 +7,7 @@
     android:background="@drawable/backgrounnya"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisLogin.MainActivity">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"

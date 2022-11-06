@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

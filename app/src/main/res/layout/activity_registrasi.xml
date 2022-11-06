@@ -6,7 +6,7 @@
     android:background="@drawable/backgroundsignup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrasiActivity">
+    tools:context=".RegisLogin.RegistrasiActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUsername"

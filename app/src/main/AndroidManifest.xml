@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ugdnyakawan">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,31 +16,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UGDnyakawan"
         tools:targetApi="31">
+
         <activity
             android:name=".Usertama"
             android:exported="false"
             android:label="@string/title_activity_usertama"
             android:theme="@style/Theme.UGDnyakawan.NoActionBar" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".Tab.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".First2Fragment"
-            android:exported="true"/>
+            android:name=".Fragment.First2Fragment"
+            android:exported="true" />
         <activity
-            android:name=".EditActivityNote"
-            android:exported="true"/>
+            android:name=".Tab.EditActivityNote"
+            android:exported="true" />
         <activity
             android:name=".Splash"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity1"
+            android:name=".Tab.HomeActivity1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".map.MapActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistrasiActivity"
+            android:name=".Camera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisLogin.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisLogin.RegistrasiActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,13 +57,14 @@
         </activity>
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name=".Notif.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <receiver android:name=".NotificationReceiver"/>
+
+        <receiver android:name=".Notif.NotificationReceiver" />
     </application>
 
 </manifest>

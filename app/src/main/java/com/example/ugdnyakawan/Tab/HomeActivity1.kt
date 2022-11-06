@@ -1,13 +1,11 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Tab
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.example.ugdnyakawan.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.system.exitProcess
 
@@ -39,7 +37,7 @@ class HomeActivity1 : AppCompatActivity() {
                 return@setOnNavigationItemReselectedListener
             }
 
-            R.id.menu_makanan-> {
+            R.id.menu_makanan -> {
                 loadFragment(fma)
                 return@setOnNavigationItemReselectedListener
             }
@@ -47,6 +45,7 @@ class HomeActivity1 : AppCompatActivity() {
                 loadFragment(fmi)
                 return@setOnNavigationItemReselectedListener
             }
+
             R.id.menu_exit -> {
                 val mBuilder = android.app.AlertDialog.Builder(this@HomeActivity1)
                     .setTitle("Confirm")

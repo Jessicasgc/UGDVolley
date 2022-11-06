@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Notif
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,6 +8,7 @@ import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.ugdnyakawan.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 

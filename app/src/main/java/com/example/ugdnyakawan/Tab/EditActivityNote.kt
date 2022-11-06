@@ -1,8 +1,12 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Tab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.ugdnyakawan.Constant
+import com.example.ugdnyakawan.Note
+import com.example.ugdnyakawan.NoteDB
+import com.example.ugdnyakawan.R
 import kotlinx.android.synthetic.main.activity_edit_note.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

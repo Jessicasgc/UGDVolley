@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "177451340451",
-    "project_id": "ugdnyakawan1-b7a33",
-    "storage_bucket": "ugdnyakawan1-b7a33.appspot.com"
+    "project_number": "10137444305",
+    "project_id": "ugdnyakawannew",
+    "storage_bucket": "ugdnyakawannew.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:177451340451:android:ecec9b2fd1b0d457532516",
+        "mobilesdk_app_id": "1:10137444305:android:cc30f830dc2a4f4ef30af0",
         "android_client_info": {
           "package_name": "com.example.ugdnyakawan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "177451340451-lj4aceffoppbapctnfmvaie5b1kc7m48.apps.googleusercontent.com",
+          "client_id": "10137444305-vrhon25vkipsb10eviocgrou7rvo9pnr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBR5PgLlNjjn4sW6p2uD7rPN1d5dqnSOXA"
+          "current_key": "AIzaSyCTiyJKk1sl7fM8ctbhMx9dzcCEPpG7368"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "177451340451-lj4aceffoppbapctnfmvaie5b1kc7m48.apps.googleusercontent.com",
+              "client_id": "10137444305-vrhon25vkipsb10eviocgrou7rvo9pnr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

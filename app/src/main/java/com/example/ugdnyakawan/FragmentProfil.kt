@@ -1,11 +1,14 @@
 package com.example.ugdnyakawan
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.databinding.FragmentProfilBinding
+import com.example.ugdnyakawan.map.MapActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,28 +19,30 @@ private const val ARG_PARAM2 = "password"
  * A simple [Fragment] subclass.
  * Use the [FragmentProfil.newInstance] factory method to
  * create an instance of this fragment.
- */
-class FragmentProfil : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var username: String? = null
-    private var password: String? = null
+ */ // TODO: Rename and change types of parameters
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            username = it.getString(ARG_PARAM1)
-            password = it.getString(ARG_PARAM2)
+
+    class FragmentProfil : Fragment() {
+        private var bindingProfil: FragmentProfilBinding?=null
+        private val binding get() = bindingProfil!!
+
+        override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            bindingProfil = FragmentProfilBinding.inflate(inflater, container, false)
+            val view = binding.root
+            return view
         }
-    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false)
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
+            binding.buttonMap.setOnClickListener{
+                val intent = Intent(activity, MapActivity::class.java)
+                    startActivity(intent)
+                }
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of

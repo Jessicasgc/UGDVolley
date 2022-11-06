@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Notif
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent

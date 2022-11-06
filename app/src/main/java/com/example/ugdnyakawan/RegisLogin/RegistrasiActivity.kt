@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.RegisLogin
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -9,13 +9,14 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
+import com.example.ugdnyakawan.Notif.NotificationReceiver
+import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.Splash
 import com.example.ugdnyakawan.databinding.ActivityRegistrasiBinding
 import com.google.android.material.snackbar.Snackbar
 

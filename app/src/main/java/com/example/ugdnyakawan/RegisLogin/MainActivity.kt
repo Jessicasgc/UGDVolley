@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.RegisLogin
 
 
 import android.app.NotificationChannel
@@ -16,11 +16,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.toBitmap
+import com.example.ugdnyakawan.Tab.HomeActivity1
+import com.example.ugdnyakawan.Notif.NotificationReceiver
+import com.example.ugdnyakawan.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.activity_registrasi.*
 
 class MainActivity : AppCompatActivity() {
 

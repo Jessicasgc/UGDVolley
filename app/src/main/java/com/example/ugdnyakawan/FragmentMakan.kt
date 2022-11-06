@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ugdnyakawan.RV.RVMakananAdapter
 import com.example.ugdnyakawan.entity.ListMakanan
 
 // TODO: Rename parameter arguments, choose names that match

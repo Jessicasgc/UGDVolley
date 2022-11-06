@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Tab
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,8 +12,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.ugdnyakawan.Constant
+import com.example.ugdnyakawan.Notif.NotificationReceiver
+import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.RegisLogin.MainActivity
 import com.example.ugdnyakawan.room.User
-import com.example.ugdnyakawan.room.UserDao
 import com.example.ugdnyakawan.room.UserDB
 import kotlinx.android.synthetic.main.activity_edit.*
 import kotlinx.coroutines.CoroutineScope

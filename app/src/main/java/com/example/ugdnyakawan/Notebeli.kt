@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ugdnyakawan.Tab.EditActivityNote
 import kotlinx.android.synthetic.main.activity_notebeli.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -7,16 +7,14 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ugdnyakawan.Tab.EditProfileActivity
 import com.example.ugdnyakawan.room.User
 import com.example.ugdnyakawan.room.UserDB
-import kotlinx.android.synthetic.main.activity_usertama.*
-import kotlinx.android.synthetic.main.adapter_user.view.*
 import kotlinx.android.synthetic.main.content_usertama.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.example.ugdnyakawan.room.UserDao
 
 class Usertama : AppCompatActivity() {
 
