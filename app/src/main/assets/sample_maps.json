@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": -7.77395,
+          "lng": 110.41210
+        }
+      },
+      "name": "Mie Gacoan Babarsari",
+      "vicinity": "Jl. Babarsari Ruko Raflesia Blok B7-B10, Jl. Raya Kledokan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": -7.77452,
+          "lng": 110.415560
+        }
+      },
+      "name": "Yamie Panda Chapter Babarsari",
+      "vicinity": "Jl. Babarsari No.89, Tambak Bayan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281"
+    }
+  ],
+
+  "status": "OK"
+}
