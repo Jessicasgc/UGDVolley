@@ -30,7 +30,7 @@
             android:exported="true" />
         <activity
             android:name=".Tab.EditActivityNote"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Splash"
             android:exported="false" />
