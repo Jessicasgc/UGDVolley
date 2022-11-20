@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.ugdnyakawan.*
+import com.example.ugdnyakawan.Fragment.*
+import com.example.ugdnyakawan.Tab.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.system.exitProcess
 
@@ -22,7 +24,7 @@ class HomeActivity1 : AppCompatActivity() {
         val fp = FragmentProfil()
         val fma = FragmentMakan()
         val fmi = FragmentMinum()
-
+        val fpm = FragmentPemesanan()
     Nav = findViewById(R.id.bottomNavigation)
 
     Nav.setOnNavigationItemReselectedListener{
@@ -43,6 +45,11 @@ class HomeActivity1 : AppCompatActivity() {
             }
             R.id.menu_minuman -> {
                 loadFragment(fmi)
+                return@setOnNavigationItemReselectedListener
+            }
+
+            R.id.menu_pemesanan -> {
+                loadFragment(fpm)
                 return@setOnNavigationItemReselectedListener
             }
 

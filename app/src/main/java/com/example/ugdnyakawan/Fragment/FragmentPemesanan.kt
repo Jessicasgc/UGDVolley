@@ -1,14 +1,13 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.ugdnyakawan.RV.RVMinumanAdapter
-import com.example.ugdnyakawan.entity.ListMinuman
+import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.map.MapActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentMinum.newInstance] factory method to
+ * Use the [FragmentPemesanan.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentMinum : Fragment() {
+class FragmentPemesanan : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,20 +37,15 @@ class FragmentMinum : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_minum, container, false)
+        return inflater.inflate(R.layout.fragment_pemesanan, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val layoutManager = LinearLayoutManager(context)
-        val adapter : RVMinumanAdapter = RVMinumanAdapter(ListMinuman.listOfMinuman)
-
-        val rvMahasiswa : RecyclerView = view.findViewById(R.id.rv_minuman)
-
-        rvMahasiswa.layoutManager = layoutManager
-
-        rvMahasiswa.setHasFixedSize(true)
-        rvMahasiswa.adapter = adapter
+//        binding.buttonMap.setOnClickListener{
+//            val intent = Intent(activity, MapActivity::class.java)
+//            startActivity(intent)
+//        }
     }
     companion object {
         /**
@@ -60,12 +54,12 @@ class FragmentMinum : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentMinum.
+         * @return A new instance of fragment FragmentPemesanan.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentMinum().apply {
+            FragmentPemesanan().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

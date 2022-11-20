@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ugdnyakawan.RV.RVMakananAdapter
-import com.example.ugdnyakawan.entity.ListMakanan
+import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.RV.RVMinumanAdapter
+import com.example.ugdnyakawan.entity.ListMinuman
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +18,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FragmentMakan.newInstance] factory method to
+ * Use the [FragmentMinum.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentMakan : Fragment() {
+class FragmentMinum : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,24 +39,21 @@ class FragmentMakan : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_makan, container, false)
+        return inflater.inflate(R.layout.fragment_minum, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val layoutManager = LinearLayoutManager(context)
-        val adapter : RVMakananAdapter = RVMakananAdapter(ListMakanan.listOfMakanan)
+        val adapter : RVMinumanAdapter = RVMinumanAdapter(ListMinuman.listOfMinuman)
 
-        val rvMakanan : RecyclerView = view.findViewById(R.id.rv_makanan)
+        val rvMahasiswa : RecyclerView = view.findViewById(R.id.rv_minuman)
 
-        rvMakanan.layoutManager = layoutManager
+        rvMahasiswa.layoutManager = layoutManager
 
-        rvMakanan.setHasFixedSize(true)
-
-        rvMakanan.adapter = adapter
-
+        rvMahasiswa.setHasFixedSize(true)
+        rvMahasiswa.adapter = adapter
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -63,12 +61,12 @@ class FragmentMakan : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentMakan.
+         * @return A new instance of fragment FragmentMinum.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            FragmentMakan().apply {
+            FragmentMinum().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

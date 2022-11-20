@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Fragment
 
 import android.content.Context
 import android.content.Intent
@@ -40,8 +40,8 @@ private const val ARG_PARAM2 = "password"
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
             binding.button.setOnClickListener{
-                val intent = Intent(activity, CameraActivity::class.java)
-                    startActivity(intent)
+                val intent = Intent(this.activity, CameraActivity::class.java)
+                startActivity(intent)
                 }
     }
     companion object {
