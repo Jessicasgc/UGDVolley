@@ -7,6 +7,6 @@ class Profil (@SerializedName("username") var username: String,
               @SerializedName("password") var password: String,
               @SerializedName("email") var email: String,
               @SerializedName("tgl_lahir") var tgl_Lahir: String,
-              @SerializedName("username") var no_telp: String) {
+              @SerializedName("no_telp") var no_telp: String) {
     var id: Int? = null
 }
