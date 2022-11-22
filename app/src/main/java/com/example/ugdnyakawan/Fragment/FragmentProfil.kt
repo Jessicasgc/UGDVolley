@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.example.ugdnyakawan.Camera.CameraActivity
 import com.example.ugdnyakawan.databinding.FragmentProfilBinding
 import com.example.ugdnyakawan.map.MapActivity
+import kotlinx.android.synthetic.main.activity_edit_profile.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,10 +40,14 @@ private const val ARG_PARAM2 = "password"
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
-            binding.button.setOnClickListener{
+//            binding.button.setOnClickListener{
+//                val intent = Intent(this.activity, CameraActivity::class.java)
+//                startActivity(intent)
+//                }
+            view.button.setOnClickListener {
                 val intent = Intent(this.activity, CameraActivity::class.java)
                 startActivity(intent)
-                }
+            }
     }
     companion object {
         /**

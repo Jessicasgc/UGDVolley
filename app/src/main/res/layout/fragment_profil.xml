@@ -5,99 +5,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
     android:padding="20dp"
-    tools:context=".FragmentProfil">
-    <EditText
-        android:id="@+id/edit_username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:minLines="3"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-        android:id="@+id/edit_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_username"
-        android:layout_marginTop="10dp"
-        android:gravity="top"
-        />
+    tools:context=".Fragment.FragmentProfil">
 
-    <EditText
-        android:id="@+id/edit_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password"
-        android:layout_marginTop="10dp"
-        android:gravity="top"
-        />
-
-    <EditText
-        android:id="@+id/edit_tglLahir"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Tanggal Lahir"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_email"
-        android:layout_marginTop="10dp"
-        android:gravity="top"
-        />
-
-    <EditText
-        android:id="@+id/edit_notelp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nomor Telepon"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_tglLahir"
-        android:layout_marginTop="10dp"
-        android:gravity="top"
-        />
-    <Button
-        android:id="@+id/button_save"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="SAVE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_notelp"
-        android:layout_marginTop="20dp"
-        />
-    <Button
-        android:id="@+id/button_update"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="UPDATE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_save"
-        android:layout_marginTop="20dp"
-        />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Camera"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sr_mahasiwa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
+        app:layout_constraintVertical_bias="0.0">
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rv_mahasiwa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="88dp"
+            tools:listitem="@layout/profil" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
