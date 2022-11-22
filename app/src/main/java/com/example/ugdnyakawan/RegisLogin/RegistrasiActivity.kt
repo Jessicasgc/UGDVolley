@@ -19,6 +19,7 @@ import com.android.volley.AuthFailureError
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.example.ugdnyakawan.Notif.NotificationReceiver
 import com.example.ugdnyakawan.R
 import com.example.ugdnyakawan.Splash
@@ -37,8 +38,9 @@ class RegistrasiActivity : AppCompatActivity() {
     private val CHANNEL_ID_1 = "channel_notification_01"
     private val notificationId1 = 101
 
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        queue= Volley.newRequestQueue(this)
 
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
@@ -112,7 +114,7 @@ class RegistrasiActivity : AppCompatActivity() {
                 bundle.putString("tanggalLahir", binding?.tilTglLahir?.getEditText()?.getText().toString())
                 bundle.putString("nomorTelpon", binding?.tilNoTelp?.getEditText()?.getText().toString())
                 createProfil()
-                sendNotificationRegis()
+//                sendNotificationRegis()
                 intentToLogin.putExtra("register", bundle)
                 startActivity(intentToLogin)
             }
@@ -173,6 +175,7 @@ class RegistrasiActivity : AppCompatActivity() {
         val email : String = binding?.tilEmail?.getEditText()?.getText().toString()
         val tanggalLahir : String = binding?.tilTglLahir?.getEditText()?.getText().toString()
         val nomorTelepon : String = binding?.tilNoTelp?.getEditText()?.getText().toString()
+        //888println(username)
 
         val profil = Profil(
             username,
@@ -189,9 +192,6 @@ class RegistrasiActivity : AppCompatActivity() {
                 if(profil != null)
                     Toast.makeText(this@RegistrasiActivity, "Data Berhasil Ditambahkan", Toast.LENGTH_SHORT).show()
 
-                val returnIntent = Intent()
-                setResult(RESULT_OK, returnIntent)
-                finish()
 
 
             }, Response.ErrorListener { error ->
