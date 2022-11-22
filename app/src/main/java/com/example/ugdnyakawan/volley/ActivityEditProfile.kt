@@ -17,6 +17,7 @@ import com.example.ugdnyakawan.volley.models.Profil
 import com.google.android.material.textfield.TextInputEditText
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_edit_profile.*
+import kotlinx.android.synthetic.main.item_pemesanan.*
 import org.json.JSONObject
 import java.lang.reflect.Method
 import java.nio.charset.StandardCharsets
@@ -81,6 +82,7 @@ class ActivityEditProfile : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 } catch (e: Exception) {
+                    println(e.message)
                     Toast.makeText(this@ActivityEditProfile, e.message, Toast.LENGTH_SHORT).show()
                 }
             }) {
@@ -104,4 +106,5 @@ class ActivityEditProfile : AppCompatActivity() {
         }
         queue!!.add(stringRequest)
     }
+
 }

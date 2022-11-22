@@ -2,7 +2,7 @@ package com.example.ugdnyakawan.volley.api
 
 class ProfilApi {
     companion object {
-        val BASE_URL = "http://10.53.11.195/UGD-PBP-apiserver/public/"
+        val BASE_URL = "http://10.53.15.203/UGD-PBP-apiserver/public/"
 
         val GET_ALL_URL = BASE_URL + "profil/"
         val GET_BY_ID_URL = BASE_URL + "profil/"

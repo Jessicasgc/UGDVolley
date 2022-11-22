@@ -12,7 +12,7 @@
     app:cardCornerRadius="5dp"
     app:cardUseCompatPadding="true"
     android:padding="20dp"
-    tools:context=".Fragment.FragmentProfil">
+    tools:context=".FragmentProfil">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/sr_mahasiwa"
