@@ -1,4 +1,4 @@
-package com.example.ugdnyakawan
+package com.example.ugdnyakawan.Fragment
 
 import android.content.Intent
 import android.os.Bundle

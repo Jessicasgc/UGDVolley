@@ -19,6 +19,8 @@ import androidx.core.app.NotificationManagerCompat
 import com.example.ugdnyakawan.Tab.HomeActivity1
 import com.example.ugdnyakawan.Notif.NotificationReceiver
 import com.example.ugdnyakawan.R
+import com.example.ugdnyakawan.Tab.ActivityParaLibrary
+import com.example.ugdnyakawan.map.MapActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 
@@ -91,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             sendNotificationWarning()
             if (username == user && password == pass) checkLogin = true
             if (!checkLogin) return@OnClickListener
-            val toHome = Intent(this@MainActivity, HomeActivity1::class.java)
+            val toHome = Intent(this@MainActivity, ActivityParaLibrary::class.java)
             sendNotificationLogin()
             startActivity(toHome)
 

@@ -7,7 +7,6 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ugdnyakawan.Tab.EditProfileActivity
 import com.example.ugdnyakawan.room.User
 import com.example.ugdnyakawan.room.UserDB
 import kotlinx.android.synthetic.main.content_usertama.*
@@ -89,11 +88,11 @@ class Usertama : AppCompatActivity() {
     }
     //pick data dari Id yang sebagai primary key
     fun intentEdit(userId : Int, intentType: Int){
-        startActivity(
-            Intent(applicationContext, EditProfileActivity::class.java)
-                .putExtra("intent_id", userId)
-                .putExtra("intent_type", intentType)
-        )
+//        startActivity(
+//            Intent(applicationContext, EditProfileActivity::class.java)
+//                .putExtra("intent_id", userId)
+//                .putExtra("intent_type", intentType)
+//        )
     }
 
 }

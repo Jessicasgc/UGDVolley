@@ -7,7 +7,6 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ugdnyakawan.Tab.EditActivityNote
 import kotlinx.android.synthetic.main.activity_notebeli.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -87,10 +86,10 @@ class Notebeli : AppCompatActivity() {
     }
     //pick data dari Id yang sebagai primary key
     fun intentEdit(noteId : Int, intentType: Int){
-        startActivity(
-            Intent(applicationContext, EditActivityNote::class.java)
-                .putExtra("intent_id", noteId)
-                .putExtra("intent_type", intentType)
-        )
+//        startActivity(
+//            Intent(applicationContext, EditActivityNote::class.java)
+//                .putExtra("intent_id", noteId)
+//                .putExtra("intent_type", intentType)
+//        )
     }
 }

@@ -33,7 +33,7 @@ import java.nio.charset.StandardCharsets
 
 class RegistrasiActivity : AppCompatActivity() {
     private var binding : ActivityRegistrasiBinding? = null
-    private lateinit var registrasiLayout: ConstraintLayout
+    private lateinit var registrasiLayout: ActivityRegistrasiBinding
     private var queue: RequestQueue? = null
     private val CHANNEL_ID_1 = "channel_notification_01"
     private val notificationId1 = 101
@@ -76,7 +76,7 @@ class RegistrasiActivity : AppCompatActivity() {
             binding?.tilTglLahir?.getEditText()?.setText("")
             binding?.tilNoTelp?.getEditText()?.setText("")
 
-            Snackbar.make(registrasiLayout, "Text Cleared Success", Snackbar.LENGTH_LONG).show()
+            //Snackbar.make(registrasiLayout, "Text Cleared Success", Snackbar.LENGTH_LONG).show()
         }
 
 
@@ -114,7 +114,7 @@ class RegistrasiActivity : AppCompatActivity() {
                 bundle.putString("tanggalLahir", binding?.tilTglLahir?.getEditText()?.getText().toString())
                 bundle.putString("nomorTelpon", binding?.tilNoTelp?.getEditText()?.getText().toString())
                 createProfil()
-//                sendNotificationRegis()
+                sendNotificationRegis()
                 intentToLogin.putExtra("register", bundle)
                 startActivity(intentToLogin)
             }

@@ -19,7 +19,7 @@
 
     <item android:id="@+id/menu_pemesanan"
         android:icon="@drawable/ic_pesanan"
-        android:title="List Menu Peemesanan"/>
+        android:title="List Menu Pemesanan"/>
 
     <item android:id="@+id/menu_exit"
         android:icon="@drawable/ic_login"

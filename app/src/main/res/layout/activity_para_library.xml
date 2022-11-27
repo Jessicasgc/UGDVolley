@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tab.ActivityParaLibrary">
+
+    <Button
+        android:id="@+id/qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <Button
+        android:id="@+id/chart"
+        android:layout_width="96dp"
+        android:layout_height="53dp"
+        android:text="Chart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--<com.ogaclejapan.arclayout.ArcLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--app:arc_origin="bottom"-->
+<!--app:arc_color="#4D000000"-->
+<!--app:arc_radius="168dp"-->
+<!--app:arc_axisRadius="120dp"-->
+<!--app:arc_freeAngle="false"-->
+<!--app:arc_reverseAngle="false"-->
+<!--tools:context=".Tab.ActivityParaLibrary">-->
+
+<!--<Button-->
+<!--    android:id="@+id/qr"-->
+<!--    android:layout_width="48dp"-->
+<!--    android:layout_height="48dp"-->
+<!--    android:gravity="center"-->
+<!--    android:text="A"-->
+<!--    android:textColor="#FFFFFF"-->
+<!--    android:background="#03A9F4"-->
+<!--    app:arc_origin="center" />-->
+
+<!--<Button-->
+<!--    android:id="@+id/chart"-->
+<!--    android:layout_width="48dp"-->
+<!--    android:layout_height="48dp"-->
+<!--    android:gravity="center"-->
+<!--    android:text="B"-->
+<!--    android:textColor="#FFFFFF"-->
+<!--    android:background="#00BCD4"-->
+<!--    app:arc_origin="center"/>-->
+
+<!--<Button-->
+<!--    android:id="@+id/button5"-->
+<!--    android:layout_width="48dp"-->
+<!--    android:layout_height="48dp"-->
+<!--    android:gravity="center"-->
+<!--    android:text="C"-->
+<!--    android:textColor="#FFFFFF"-->
+<!--    android:background="#009688"-->
+<!--    app:arc_origin="center" />-->
+
+<!--</com.ogaclejapan.arclayout.ArcLayout>-->

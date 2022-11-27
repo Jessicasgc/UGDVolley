@@ -41,7 +41,7 @@ class ActivityEditProfile : AppCompatActivity() {
     }
 
     private fun updateProfil(id: Long) {
-        // Fungsi untuk mengubah data mahasiswa.
+        // Fungsi untuk mengubah data profil
 
         val etNama= edit_username?.text.toString()
         val etPassword= edit_password?.text.toString()
