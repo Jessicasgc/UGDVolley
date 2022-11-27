@@ -44,12 +44,12 @@
         android:inputType="textAutoComplete"/>
 
     <EditText
-        android:id="@+id/editTextKampus"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:ems="10"
-        android:hint="Nama Kampus"
+        android:hint="Email"
         android:inputType="text"/>
 
     <Button
